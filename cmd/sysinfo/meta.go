@@ -2,11 +2,12 @@ package sysinfo
 
 import (
 	"encoding/binary"
-	"geacon/cmd/crypt"
 	"net"
 	"os"
 	"runtime"
 	"strings"
+
+	"github.com/0xBienCuit/biencon/cmd/crypt"
 )
 
 func GeaconID() int {

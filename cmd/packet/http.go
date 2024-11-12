@@ -3,7 +3,7 @@ package packet
 import (
 	"crypto/tls"
 	"fmt"
-	"geacon/cmd/config"
+	"github.com/0xBienCuit/biencon/cmd/config"
 	"net/http"
 	"time"
 

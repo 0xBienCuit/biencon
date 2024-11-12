@@ -6,7 +6,8 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"errors"
-	"geacon/cmd/config"
+
+	"github.com/0xBienCuit/biencon/cmd/config"
 )
 
 func RsaEncrypt(origData []byte) ([]byte, error) {
@@ -33,5 +34,5 @@ func RsaDecrypt(origData []byte) ([]byte, error) {
 		return nil, err
 	}
 	priv := privInterface.(*rsa.PrivateKey)
-	return rsa.DecryptPKCS1v15 (rand.Reader, priv, origData)
+	return rsa.DecryptPKCS1v15(rand.Reader, priv, origData)
 }

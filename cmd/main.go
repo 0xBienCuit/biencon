@@ -3,14 +3,15 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"geacon/cmd/config"
-	"geacon/cmd/crypt"
-	"geacon/cmd/packet"
-	"geacon/cmd/util"
 	"io"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/0xBienCuit/biencon/cmd/config"
+	"github.com/0xBienCuit/biencon/cmd/crypt"
+	"github.com/0xBienCuit/biencon/cmd/packet"
+	"github.com/0xBienCuit/biencon/cmd/util"
 )
 
 func main() {

