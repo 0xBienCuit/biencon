@@ -1,5 +1,7 @@
 # Geacon
 
+> [!INFO] AUTHOR: ZQA
+
 **Using Go to implement CobaltStrike's Beacon**
 
 ----
